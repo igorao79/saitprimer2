@@ -707,8 +707,8 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(/pics/secondblock/flex1.avif), url(/pics/secondblock/flex1.webp), url(/pics/secondblock/flex1.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/pics/secondblock/flex1.avif), url(/pics/secondblock/flex1.webp), url(/pics/secondblock/flex1.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../pics/secondblock/flex1.avif), url(../pics/secondblock/flex1.webp), url(../pics/secondblock/flex1.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../pics/secondblock/flex1.avif), url(../pics/secondblock/flex1.webp), url(../pics/secondblock/flex1.png);
   background-size: cover; /* Заполняет весь контейнер */
   background-position: center; /* Центрирует изображение */
   background-repeat: no-repeat; /* Запрещает повторение */
@@ -726,16 +726,16 @@ button {
       flex-shrink: 0;
 }
 .secondblock__flexrow__flexcards__card:nth-child(2) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(/pics/secondblock/flex2.avif), url(/pics/secondblock/flex2.webp), url(/pics/secondblock/flex2.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/pics/secondblock/flex2.avif), url(/pics/secondblock/flex2.webp), url(/pics/secondblock/flex2.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(../pics/secondblock/flex2.avif), url(../pics/secondblock/flex2.webp), url(../pics/secondblock/flex2.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../pics/secondblock/flex2.avif), url(../pics/secondblock/flex2.webp), url(../pics/secondblock/flex2.png);
 }
 .secondblock__flexrow__flexcards__card:nth-child(3) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(/pics/secondblock/flex3.avif), url(/pics/secondblock/flex3.webp), url(/pics/secondblock/flex3.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/pics/secondblock/flex3.avif), url(/pics/secondblock/flex3.webp), url(/pics/secondblock/flex3.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../pics/secondblock/flex3.avif), url(../pics/secondblock/flex3.webp), url(../pics/secondblock/flex3.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../pics/secondblock/flex3.avif), url(../pics/secondblock/flex3.webp), url(../pics/secondblock/flex3.png);
 }
 .secondblock__flexrow__flexcards__card:nth-child(4) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(/pics/secondblock/flex4.avif), url(/pics/secondblock/flex4.webp), url(/pics/secondblock/flex4.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/pics/secondblock/flex4.avif), url(/pics/secondblock/flex4.webp), url(/pics/secondblock/flex4.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../pics/secondblock/flex4.avif), url(../pics/secondblock/flex4.webp), url(../pics/secondblock/flex4.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../pics/secondblock/flex4.avif), url(../pics/secondblock/flex4.webp), url(../pics/secondblock/flex4.png);
 }
 .secondblock__flexrow2 {
   max-width: 1170px;

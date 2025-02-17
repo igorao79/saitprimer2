@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
             text: ["Доступно в белом цвете", "2-сенсорная клавиатура"],
             price: "87 990 Р",
             images: {
-                avif: "../pics/firstblock/piano.avif",
-                webp: "../pics/firstblock/piano.webp",
-                png: "../pics/firstblock/piano.png"
+                avif: "pics/firstblock/piano.avif", // относительный путь
+                webp: "pics/firstblock/piano.webp",
+                png: "pics/firstblock/piano.png"
             }
         },
         {
@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
             text: ["Компактный и стильный дизайн", "Механика Graded Hammer Standard"],
             price: "75 990 Р",
             images: {
-                avif: "../pics/firstblock/piano2.avif",
-                webp: "../pics/firstblock/piano2.webp",
-                png: "../pics/firstblock/piano2.png"
+                avif: "pics/firstblock/piano2.avif",
+                webp: "pics/firstblock/piano2.webp",
+                png: "pics/firstblock/piano2.png"
             }
         },
         {
@@ -78,12 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
             text: ["Реалистичное звучание", "Поддержка Bluetooth"],
             price: "95 990 Р",
             images: {
-                avif: "../pics/firstblock/piano3.avif",
-                webp: "../pics/firstblock/piano3.webp",
-                png: "../pics/firstblock/piano3.png"
+                avif: "pics/firstblock/piano3.avif",
+                webp: "pics/firstblock/piano3.webp",
+                png: "pics/firstblock/piano3.png"
             }
         }
     ];
+    
 
     let currentIndex = 0;
     const card = document.querySelector('.firstblock__main__card');

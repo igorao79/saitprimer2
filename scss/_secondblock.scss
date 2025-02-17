@@ -37,9 +37,9 @@
                 align-items: center;
                 justify-content: center;
                 background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-                                  url(/pics/secondblock/flex1.avif),
-                                  url(/pics/secondblock/flex1.webp),
-                                  url(/pics/secondblock/flex1.png);
+                                  url(../pics/secondblock/flex1.avif),
+                                  url(../pics/secondblock/flex1.webp),
+                                  url(../pics/secondblock/flex1.png);
                 background-size: cover;  /* Заполняет весь контейнер */
                 background-position: center; /* Центрирует изображение */
                 background-repeat: no-repeat; /* Запрещает повторение */
@@ -63,22 +63,22 @@
             
             &__card:nth-child(2) {
                 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                                  url(/pics/secondblock/flex2.avif),
-                                  url(/pics/secondblock/flex2.webp),
-                                  url(/pics/secondblock/flex2.png);
+                                  url(../pics/secondblock/flex2.avif),
+                                  url(../pics/secondblock/flex2.webp),
+                                  url(../pics/secondblock/flex2.png);
             }
             
             &__card:nth-child(3) {
                 background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-                                  url(/pics/secondblock/flex3.avif),
-                                  url(/pics/secondblock/flex3.webp),
-                                  url(/pics/secondblock/flex3.png);
+                                  url(../pics/secondblock/flex3.avif),
+                                  url(../pics/secondblock/flex3.webp),
+                                  url(../pics/secondblock/flex3.png);
             }
             &__card:nth-child(4) {
                 background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-                                  url(/pics/secondblock/flex4.avif),
-                                  url(/pics/secondblock/flex4.webp),
-                                  url(/pics/secondblock/flex4.png);
+                                  url(../pics/secondblock/flex4.avif),
+                                  url(../pics/secondblock/flex4.webp),
+                                  url(../pics/secondblock/flex4.png);
             }
             
 
