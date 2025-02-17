@@ -1,0 +1,123 @@
+.sixblock {
+    width: 100%;
+    min-height: 791px;
+    display: flex;
+    align-items: center;
+    padding-left: 12%;
+    position: relative;
+    overflow: hidden;
+    background: black;
+    color: white;
+
+    &__pic {
+        max-width: 1416px;
+        max-height: 944px;
+        position: absolute;
+        left: 43%;
+        top: 12%;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+    }
+
+    &__content {
+        position: relative;
+        max-width: 542px;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        &__title {
+            font-size: 3.6rem;
+            font-family: 'graphblack';
+            line-height: 130%;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+            line-height: 150%;
+            font-family: 'graphr';
+        }
+
+        &__scroll-container {
+            max-height: 300px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px 10px 0px;
+
+            &::-webkit-scrollbar {
+                width: 10px;  // ширина скроллера
+                border-radius: 10px; // скругление
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgb(185, 176, 176);  // темно-серый цвет бегунка
+                border-radius: 10px;  // скругленные углы
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); // тень для бегунка
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;  // плавные эффекты
+            }
+
+            &::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.2); // светлый фон для трека
+                border-radius: 10px;
+            }
+
+            &__list-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+
+                &__name {
+                    font-size: 1.6rem;
+                    font-family: 'graphsb';
+                    line-height: 150%;
+                }
+
+                &__position {
+                    opacity: 0.7;
+                    margin-left: 20px;
+                    font-size: 1.4rem;
+                    font-family: 'graphr';
+                    line-height: 150%;
+                }
+            }
+
+            &__divider {
+                margin: 0;
+                border: 0;
+                border-top: 1px solid #ddd;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                opacity: 0.7;
+            }
+        }
+
+        &__button {
+            max-width: 197px;
+            min-height: 46px;
+            cursor: pointer;
+            font-size: 1.6rem;
+            font-family: 'graphm';
+            line-height: 150%;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+            
+        }
+    }
+
+}
+
+

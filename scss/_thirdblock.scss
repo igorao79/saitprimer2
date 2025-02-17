@@ -1,0 +1,167 @@
+.thirdblock {
+    width: 100%;
+    min-height: 546px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        background: url(../pics/thirdblock/arms.jpg) no-repeat center 14%; /* Сдвигаем фон немного вниз */
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; /* Отправляем фон на задний план */
+        background-attachment: scroll;  /* Убираем фиксированное прикрепление */
+        background-color: rgba(0, 0, 0, 0.8);
+        background-blend-mode: darken;
+    }
+
+    &__left {
+        max-width: 805px;
+        min-height: 259px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        // align-items: center;
+        z-index: 1;
+
+        &__title {
+            font-size: 3.6rem;
+            font-family: 'graphblack';
+            color: white;
+            line-height: 130%;
+        }
+
+        &__spisok {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            list-style-type: none; /* Убираем стандартные маркеры */
+
+
+            &__element {
+                font-size: 1.6rem;
+                font-family: 'graphr';
+                line-height: 150%;
+                color: white;
+                background: url(../pics/thirdblock/icon.svg) no-repeat left 10%;
+                background-size: 20px 20px; /* Устанавливаем размер маркера (можно подстроить по твоим нуждам) */
+                padding-left: 30px; /* Добавляем отступ слева для маркеров */
+            }
+
+        }
+
+
+    }
+
+
+    &__right {
+        max-width: 315px;
+        min-height: 262px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgb(255, 255, 255);
+        z-index: 1;
+        color: white;
+        line-height: 150%;
+        font-size: 1.6rem;
+
+        &__span {
+            font-family: 'graphsb';
+            max-width: 255px;
+        }
+
+        &__text {
+            font-family: 'graphr';
+            max-width: 255px;
+        }
+
+    }
+
+
+
+
+
+}
+
+// /////////////////////////////////////////////////////////////////////
+
+@supports (background-image: url(../pics/thirdblock/arms.webp)) {
+    .thirdblock::before {
+        background: url(../pics/thirdblock/arms.webp) no-repeat center 53%; /* Для WebP */
+        background-attachment: scroll;
+        background-color: rgba(0, 0, 0, 0.8);
+        background-blend-mode: darken;
+    }
+}
+
+@supports (background-image: url(../pics/thirdblock/arms.avif)) {
+    .thirdblock::before {
+        background: url(../pics/thirdblock/arms.avif) no-repeat center 45%; /* Для AVIF */
+        background-attachment: scroll;
+        background-color: rgba(0, 0, 0, 0.8);
+        background-blend-mode: darken;
+    }
+}
+
+
+@media only screen and (max-width: 760px) {
+
+    .thirdblock {
+        padding-top: 5%;
+        flex-direction: column;
+        align-items: center;
+        min-height: 800px;
+        gap: 50px;
+
+        &::before {
+            content: '';
+            background: url(../pics/thirdblock/arms.jpg) no-repeat center center;
+            background-size: cover; /* Полностью заполняет блок */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-attachment: scroll;
+            background-color: rgba(0, 0, 0, 0.8);
+            background-blend-mode: darken;
+        }
+        
+
+        &__left {
+
+            align-items: center;
+
+            &__title {
+                font-size: 2rem;
+            }
+
+            &__spisok {
+                width: 80%;
+            }
+
+        }
+
+
+        &__right {
+            
+            padding: 10px 20px;
+
+        }
+
+    }
+
+}

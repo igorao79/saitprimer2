@@ -1,0 +1,258 @@
+.secondblock {
+    width: 100%;
+    min-height: 1270px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 84px;
+    background-color: white;
+    position: relative;
+
+    &__flexrow {
+        max-width: 1170px;
+        min-height: 367px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        &__title {
+            font-size: 3.6rem;
+            color: black;
+            font-family: 'graphblack';
+            line-height: 130%;
+            text-transform: uppercase;
+        }
+
+        &__flexcards {
+            width: 100%;
+            min-height: 270px;
+            display: flex;
+            gap: 30px;
+
+            &__card {
+                max-width: 270px;
+                padding: 36px 123px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                                  url(/pics/secondblock/flex1.avif),
+                                  url(/pics/secondblock/flex1.webp),
+                                  url(/pics/secondblock/flex1.png);
+                background-size: cover;  /* Заполняет весь контейнер */
+                background-position: center; /* Центрирует изображение */
+                background-repeat: no-repeat; /* Запрещает повторение */
+                cursor: pointer;
+
+                &__title {
+                    font-size: 1.6rem;
+                    font-family: 'graphblack';
+                    color: white;
+                    text-transform: uppercase;
+                    line-height: 150%;
+                }
+
+                & svg {
+                    flex-shrink: 0;
+                }
+
+
+            }
+
+            
+            &__card:nth-child(2) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                                  url(/pics/secondblock/flex2.avif),
+                                  url(/pics/secondblock/flex2.webp),
+                                  url(/pics/secondblock/flex2.png);
+            }
+            
+            &__card:nth-child(3) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                                  url(/pics/secondblock/flex3.avif),
+                                  url(/pics/secondblock/flex3.webp),
+                                  url(/pics/secondblock/flex3.png);
+            }
+            &__card:nth-child(4) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                                  url(/pics/secondblock/flex4.avif),
+                                  url(/pics/secondblock/flex4.webp),
+                                  url(/pics/secondblock/flex4.png);
+            }
+            
+
+        }
+
+
+    }
+
+    &__flexrow2 {
+        max-width: 1170px;
+        min-height: 542px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        position: relative;
+        scroll-behavior: smooth;
+
+        &__arrowleft, &__arrowright {
+            position: absolute;
+            bottom: 50%;
+            font-size: 5rem;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        &__arrowleft {
+            left: -10%;
+        }
+
+        &__arrowright {
+            right: -10%;
+        }
+
+        &__arrowleft.swiper-button-disabled, &__arrowright.swiper-button-disabled {
+            color: #d3d3d3;
+        }
+
+
+        &__title {
+            font-size: 3.6rem;
+            color: black;
+            font-family: 'graphblack';
+            line-height: 130%;
+            text-transform: uppercase;
+        }
+
+        &__flexcards {
+            width: 100%;
+            min-height: 380px;
+            display: flex;
+            gap: 30px;
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+
+
+            &__card {
+                max-width: 275px;
+                min-height: 360px;
+                display: flex;
+                flex-direction: column;
+                gap: 54px !important;
+                border: 1px solid black;
+
+                &__top {
+                    max-width: 270px;
+                    min-height: 270px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid rgba(17, 17, 17, 0.1);
+
+                    &__pic {
+                        max-width: 199px;
+                        min-height: 152px;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                    }
+
+                }
+
+                &__title {
+                    font-size: 1.4rem;
+                    font-family: 'graphbold';
+                    line-height: 150%;
+                }
+
+                &__footer {
+                    width: 100%;
+                    min-height: 40px;
+                    display: flex;
+                    gap: 32%;
+                    align-items: center;
+                    border: 2px solid rgba(0, 0, 0, 0.6);
+                    backdrop-filter: blur(5px);
+
+                    &__left {
+                        max-width: 126px;
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+
+                        &__button {
+                            max-width: 40px;
+                            background-color: black;
+                        }
+
+                        &__price {
+                            font-size: 1.6rem;
+                            font-family: 'graphsb';
+                        }
+
+                    }
+
+                    &__right {
+                        max-width: 84px;
+                        min-height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &__like {
+                            max-width: 40px;
+                            min-height: 40px;
+                            background-color: transparent;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .swiper-wrapper .secondblock__flexrow2__flexcards__card {
+        display: flex;
+        gap: 20px !important;
+    }
+    
+
+
+}
+
+@media only screen and (max-width: 760px) {
+    .secondblock {
+        padding-top: 25%;
+
+        &__flexrow {
+
+            align-items: center;
+        
+
+            &__title {
+                font-size: 2rem;
+            }
+
+            &__flexcards {
+
+                flex-direction: column ;
+
+                &__card {
+                    min-height: 120px;
+                }
+
+            }
+
+
+        }
+
+    }
+}

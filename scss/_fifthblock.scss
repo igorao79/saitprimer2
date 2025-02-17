@@ -1,0 +1,96 @@
+.fifthblock {
+    width: 100%;
+    min-height: 538px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+
+
+    &__title {
+        font-size: 3.6rem;
+        font-family: 'graphblack';
+        line-height: 130%;
+    }
+
+
+    &__text {
+        max-width: 1170px;
+        font-size: 1.6rem;
+        line-height: 150%;
+        font-family: 'graphr';
+    }
+
+    &__flexrow {
+        max-width: 1170px;
+        display: flex;
+        gap: 150px;
+        align-items: center;
+        justify-content: center;
+
+        &__el {
+            max-width: 210px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &__textcont {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                &__subtitle {
+                    font-size: 1.8rem;
+                    font-family: 'graphm';
+                    line-height: 150%;
+                    text-transform: uppercase;
+                }
+
+                &__subtext {
+                    font-size: 1.6rem;
+                    font-family: 'graphr';
+                    line-height: 150%;
+                }
+
+
+            }
+
+        }
+
+    }
+
+
+}
+
+
+@media only screen and (max-width: 760px) {
+    .fifthblock {
+        
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__text {
+            max-width: 330px;
+        }
+
+        &__flexrow {
+            display: flex;
+            flex-wrap: wrap; /* Разрешаем перенос элементов на следующую строку */
+            justify-content: space-between;
+            gap: 10px;
+            transform: scale(0.85);
+
+            &__el {
+                max-width: 53%; /* Задаем ширину элементов примерно 48% для двух колонок */
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                
+            }
+        }
+    }
+}

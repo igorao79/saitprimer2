@@ -1,0 +1,78 @@
+.seventhblock {
+    width: 100%;
+    min-height: 508px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    background-color: white;
+    overflow: hidden;
+
+
+    &__left {
+        max-width: 600px;
+        min-height: 324px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        &__title {
+            font-size: 3.6rem;
+            font-family: 'graphblack';
+            line-height: 130%;
+        }
+
+        &__textblock {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &__text {
+                font-size: 1.6rem;
+                line-height: 150%;
+                font-family: 'graphr';
+            }
+
+        }
+
+    }
+
+    &__pic {
+        min-width: 540px; // Ограничение максимальной ширины
+        height: 304px; // Ограничение минимальной высоты
+        box-shadow: 10px -11px 8px 0px rgba(0, 0, 0, 0.6);
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+    
+        &__arrowleft,
+        &__arrowright {
+            position: absolute;
+            bottom: 50%;
+            font-size: 5rem;
+            cursor: pointer;
+            z-index: 999;
+            color: white;
+        }
+    
+        &__arrowleft {
+            bottom: 2%;
+            left: 5%;
+        }
+    
+        &__arrowright {
+            bottom: 2%;
+            right: 5%;
+        }
+    
+    }
+
+}
