@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
             text: ["Доступно в белом цвете", "2-сенсорная клавиатура"],
             price: "87 990 Р",
             images: {
-                avif: "pics/firstblock/piano.avif", // относительный путь
-                webp: "pics/firstblock/piano.webp",
-                png: "pics/firstblock/piano.png"
+                avif: "/pics/firstblock/piano.avif", // с /
+                webp: "/pics/firstblock/piano.webp",
+                png: "/pics/firstblock/piano.png"
             }
         },
         {
@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
             text: ["Компактный и стильный дизайн", "Механика Graded Hammer Standard"],
             price: "75 990 Р",
             images: {
-                avif: "pics/firstblock/piano2.avif",
-                webp: "pics/firstblock/piano2.webp",
-                png: "pics/firstblock/piano2.png"
+                avif: "/pics/firstblock/piano2.avif",
+                webp: "/pics/firstblock/piano2.webp",
+                png: "/pics/firstblock/piano2.png"
             }
         },
         {
@@ -78,12 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
             text: ["Реалистичное звучание", "Поддержка Bluetooth"],
             price: "95 990 Р",
             images: {
-                avif: "pics/firstblock/piano3.avif",
-                webp: "pics/firstblock/piano3.webp",
-                png: "pics/firstblock/piano3.png"
+                avif: "/pics/firstblock/piano3.avif",
+                webp: "/pics/firstblock/piano3.webp",
+                png: "/pics/firstblock/piano3.png"
             }
         }
     ];
+    
     
 
     let currentIndex = 0;
@@ -165,19 +166,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Массив с изображениями (с разными форматами)
     const images = [
         {
-            avif: "../pics/sevenblock/pianoplayer1.avif",
-            webp: "../pics/sevenblock/pianoplayer1.webp",
-            jpeg: "../pics/sevenblock/pianoplayer1.jpeg"
+            avif: "/pics/sevenblock/pianoplayer1.avif",
+            webp: "/pics/sevenblock/pianoplayer1.webp",
+            jpeg: "/pics/sevenblock/pianoplayer1.jpeg"
         },
         {
-            avif: "../pics/sevenblock/pianoplayer2.avif",
-            webp: "../pics/sevenblock/pianoplayer2.webp",
-            jpeg: "../pics/sevenblock/pianoplayer2.jpg"
+            avif: "/pics/sevenblock/pianoplayer2.avif",
+            webp: "/pics/sevenblock/pianoplayer2.webp",
+            jpeg: "/pics/sevenblock/pianoplayer2.jpg"
         },
         {
-            avif: "../pics/sixblock/pianist.avif", // Исправлено
-            webp: "../pics/sixblock/pianist.webp",
-            jpeg: "../pics/sixblock/pianist.jpeg"
+            avif: "/pics/sixblock/pianist.avif", // Исправлено
+            webp: "/pics/sixblock/pianist.webp",
+            jpeg: "/pics/sixblock/pianist.jpeg"
         }
     ];
 
