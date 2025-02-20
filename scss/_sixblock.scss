@@ -121,3 +121,36 @@
 }
 
 
+@media only screen and (max-width: 760px) {
+    .sixblock {
+        &__pic {
+            max-width: 300px !important;
+            top: 65%;
+            left: 15%;
+            border-radius: 5px;
+            
+            & img {
+                clip-path: none;
+            }
+
+        }
+
+        &__content {
+           align-items: center;
+
+           &__title {
+            font-size: 2rem;
+           }
+
+            &__text {
+                width: 70%;
+            }
+
+            &__button {
+                padding: 12px 10px;
+            }
+
+        }
+
+    }
+}

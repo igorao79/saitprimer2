@@ -21,7 +21,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #333;
 }
 
 html {
@@ -388,6 +387,7 @@ button {
 .firstblock__main__card__left__foot__price {
   font-size: 1.8rem;
   font-family: "graphsb";
+  white-space: nowrap;
 }
 .firstblock__main__card__right {
   max-width: 600px;
@@ -637,7 +637,9 @@ button {
   }
   .firstblock__footer {
     max-width: 500px;
-    gap: 20px;
+    gap: 5px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .firstblock__footer__element {
     max-width: 185px;
@@ -648,6 +650,28 @@ button {
   .firstblock__footer__element svg {
     width: 30px;
     height: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .firstblock__header__center {
+    gap: 300px;
+  }
+  .firstblock__header__foot {
+    gap: 10px;
+  }
+  .firstblock__header__foot__nav {
+    gap: 30px;
+  }
+  .firstblock__header__foot__icons {
+    gap: 30px;
+  }
+  .firstblock__footer {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+  .firstblock__header__foot {
+    gap: 100px;
   }
 }
 .secondblock {
@@ -887,6 +911,7 @@ button {
 @media only screen and (max-width: 760px) {
   .secondblock {
     padding-top: 25%;
+    display: none;
   }
   .secondblock__flexrow {
     -webkit-box-align: center;
@@ -904,6 +929,54 @@ button {
   }
   .secondblock__flexrow__flexcards__card {
     min-height: 120px;
+  }
+  .secondblock__flexrow2 {
+    gap: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .secondblock {
+    padding: 5% 0;
+  }
+  .secondblock__flexrow {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .secondblock__flexrow__flexcards {
+    width: 80%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 50px;
+  }
+  .secondblock__flexrow__flexcards__card {
+    min-height: 130px;
+  }
+  .secondblock__flexrow2 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 1000px;
+  }
+  .secondblock__flexrow2__arrowright, .secondblock__flexrow2__arrowleft {
+    display: none;
+  }
+  .secondblock__flexrow2__flexcards {
+    gap: 100px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+  .secondblock__flexrow2 {
+    max-width: 1000px;
+  }
+  .secondblock__flexrow2__arrowright, .secondblock__flexrow2__arrowleft {
+    display: none;
   }
 }
 .thirdblock {
@@ -1066,6 +1139,34 @@ button {
     padding: 10px 20px;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .thirdblock {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5% 0;
+  }
+  .thirdblock__left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .thirdblock::before {
+    content: "";
+    background: url(../pics/thirdblock/arms.jpg) no-repeat center center;
+    background-size: cover; /* Полностью заполняет блок */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+  }
+}
 .fourthblock {
   width: 100%;
   min-height: 490px;
@@ -1150,14 +1251,17 @@ button {
 }
 
 @media only screen and (max-width: 760px) {
+  .fourthblock {
+    overflow: hidden;
+  }
   .fourthblock__title {
     font-size: 2rem;
   }
   .fourthblock__flexblock {
     gap: 10px;
-    -webkit-transform: translateX(7%);
-        -ms-transform: translateX(7%);
-            transform: translateX(7%);
+    -webkit-transform: translateX(10%);
+        -ms-transform: translateX(10%);
+            transform: translateX(10%);
   }
   .fourthblock__flexblock__flexrow {
     -ms-flex-wrap: wrap;
@@ -1166,6 +1270,17 @@ button {
   }
   .fourthblock__flexblock__flexrow__el__svg {
     rotate: 90deg;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .fourthblock {
+    overflow: hidden;
+  }
+  .fourthblock__flexblock__flexrow {
+    scale: 0.85;
+    -webkit-transform: translateX(-3%);
+        -ms-transform: translateX(-3%);
+            transform: translateX(-3%);
   }
 }
 .fifthblock {
@@ -1275,6 +1390,19 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .fifthblock {
+    padding: 5% 0%;
+  }
+  .fifthblock__text {
+    max-width: 800px;
+  }
+  .fifthblock__flexrow {
+    max-width: 800px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 .sixblock {
@@ -1414,6 +1542,32 @@ button {
   border: 2px solid white;
 }
 
+@media only screen and (max-width: 760px) {
+  .sixblock__pic {
+    max-width: 300px !important;
+    top: 65%;
+    left: 15%;
+    border-radius: 5px;
+  }
+  .sixblock__pic img {
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .sixblock__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sixblock__content__title {
+    font-size: 2rem;
+  }
+  .sixblock__content__text {
+    width: 70%;
+  }
+  .sixblock__content__button {
+    padding: 12px 10px;
+  }
+}
 .seventhblock {
   width: 100%;
   min-height: 508px;
@@ -1495,4 +1649,29 @@ button {
 .seventhblock__pic__arrowright {
   bottom: 2%;
   right: 5%;
+}
+
+@media only screen and (max-width: 760px) {
+  .seventhblock {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .seventhblock__left {
+    max-width: 300px !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .seventhblock__left__title {
+    font-size: 2rem;
+  }
+  .seventhblock__pic {
+    min-width: 0;
+    max-width: 300px !important;
+  }
 }/*# sourceMappingURL=style.css.map */

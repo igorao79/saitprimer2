@@ -231,6 +231,7 @@
 @media only screen and (max-width: 760px) {
     .secondblock {
         padding-top: 25%;
+        display: none;
 
         &__flexrow {
 
@@ -254,5 +255,61 @@
 
         }
 
+        &__flexrow2 {
+            gap: 10px;
+
+            
+
+        }
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .secondblock {
+        padding: 5% 0;
+
+        &__flexrow {
+            align-items: center;
+
+            &__flexcards {
+                width: 80%;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+
+                &__card {
+                    min-height: 130px;
+                }
+
+            }
+
+        }
+
+        &__flexrow2 {
+            align-items: center;
+            max-width: 1000px;
+            
+            &__arrowright, &__arrowleft {
+                display: none;
+            }
+
+            &__flexcards {
+                gap: 100px;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+    .secondblock {
+        &__flexrow2 {
+            max-width: 1000px;
+            &__arrowright, &__arrowleft {
+                display: none;
+            }
+        }
     }
 }

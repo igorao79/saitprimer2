@@ -76,3 +76,26 @@
     }
 
 }
+
+@media only screen and (max-width: 760px) {
+    .seventhblock {
+        flex-direction: column;
+        
+        &__left {
+
+            max-width: 300px !important;
+            align-items: center;
+            justify-content: center;
+
+            &__title {
+                font-size: 2rem;
+            }
+        }
+
+        &__pic {
+            min-width: 0;
+            max-width: 300px !important;
+        }
+
+    }
+}

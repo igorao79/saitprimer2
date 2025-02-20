@@ -286,6 +286,7 @@
                     &__price {
                         font-size: 1.8rem;
                         font-family: 'graphsb';
+                        white-space: nowrap;
                     }
 
                 }
@@ -384,7 +385,7 @@
 
 @media only screen and (max-width: 760px) {
     .firstblock {
-        
+
         &__header {
 
             &__center {
@@ -527,7 +528,8 @@
 
         &__footer {
             max-width: 500px;
-            gap: 20px;
+            gap: 5px;
+            flex-wrap: wrap;   
 
             &__element {
                 max-width: 185px;
@@ -541,6 +543,58 @@
                     height: 30px;
                 }
 
+            }
+
+        }
+
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .firstblock {
+
+        &__header {
+
+
+            &__center {
+                gap: 300px;
+            }
+
+            &__foot {
+                gap: 10px;
+
+                &__nav {
+                    gap: 30px;
+                }
+
+                &__icons {
+                    gap: 30px;
+                }
+
+            }
+
+        }
+
+        &__footer {
+            width: 80%;
+        
+
+        }
+
+
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+    .firstblock {
+        
+        &__header {
+
+
+            &__foot {
+                gap: 100px;
             }
 
         }
