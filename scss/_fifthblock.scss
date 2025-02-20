@@ -67,7 +67,7 @@
 
 @media only screen and (max-width: 760px) {
     .fifthblock {
-        
+        padding: 5% 0%;
         &__title {
             font-size: 2rem;
         }
@@ -84,7 +84,7 @@
             transform: scale(0.85);
 
             &__el {
-                max-width: 53%; /* Задаем ширину элементов примерно 48% для двух колонок */
+                max-width: 43%; /* Задаем ширину элементов примерно 48% для двух колонок */
                 display: flex;
                 flex-direction: column;
                 gap: 20px;

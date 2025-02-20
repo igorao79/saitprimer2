@@ -636,7 +636,7 @@ button {
     gap: 50px;
   }
   .firstblock__footer {
-    max-width: 500px;
+    max-width: 400px;
     gap: 5px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1360,6 +1360,9 @@ button {
 }
 
 @media only screen and (max-width: 760px) {
+  .fifthblock {
+    padding: 5% 0%;
+  }
   .fifthblock__title {
     font-size: 2rem;
   }
@@ -1381,7 +1384,7 @@ button {
             transform: scale(0.85);
   }
   .fifthblock__flexrow__el {
-    max-width: 53%; /* Задаем ширину элементов примерно 48% для двух колонок */
+    max-width: 43%; /* Задаем ширину элементов примерно 48% для двух колонок */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1543,6 +1546,9 @@ button {
 }
 
 @media only screen and (max-width: 760px) {
+  .sixblock {
+    padding: 10% 0;
+  }
   .sixblock__pic {
     max-width: 300px !important;
     top: 65%;
@@ -1653,6 +1659,7 @@ button {
 
 @media only screen and (max-width: 760px) {
   .seventhblock {
+    padding: 10% 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
