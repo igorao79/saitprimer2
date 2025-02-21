@@ -9,7 +9,11 @@
 
     &::before {
         content: '';
-        background: url(../pics/thirdblock/arms.jpg) no-repeat center 14%; /* Сдвигаем фон немного вниз */
+        background: image-set(
+            url(../pics/thirdblock/arms.avif) type("image/avif"),
+            url(../pics/thirdblock/arms.webp) type("image/webp"),
+            url(../pics/thirdblock/arms.jpg) type("image/jpeg")
+        ) no-repeat center 14%;
         background-size: cover;
         position: absolute;
         top: 0;
@@ -97,23 +101,6 @@
 
 // /////////////////////////////////////////////////////////////////////
 
-@supports (background-image: url(../pics/thirdblock/arms.webp)) {
-    .thirdblock::before {
-        background: url(../pics/thirdblock/arms.webp) no-repeat center 53%; /* Для WebP */
-        background-attachment: scroll;
-        background-color: rgba(0, 0, 0, 0.8);
-        background-blend-mode: darken;
-    }
-}
-
-@supports (background-image: url(../pics/thirdblock/arms.avif)) {
-    .thirdblock::before {
-        background: url(../pics/thirdblock/arms.avif) no-repeat center 45%; /* Для AVIF */
-        background-attachment: scroll;
-        background-color: rgba(0, 0, 0, 0.8);
-        background-blend-mode: darken;
-    }
-}
 
 
 @media only screen and (max-width: 760px) {

@@ -102,7 +102,8 @@ button {
 }
 .firstblock__header::before {
   content: "";
-  background: url(../pics/firstblock/space.jpg) no-repeat center center fixed;
+  background: -webkit-image-set(url(../pics/firstblock/space.avif) type("image/avif"), url(../pics/firstblock/space.webp) type("image/webp"), url(../pics/firstblock/space.jpg) type("image/jpeg")) no-repeat center center fixed;
+  background: image-set(url(../pics/firstblock/space.avif) type("image/avif"), url(../pics/firstblock/space.webp) type("image/webp"), url(../pics/firstblock/space.jpg) type("image/jpeg")) no-repeat center center fixed;
   background-size: cover;
   position: absolute; /* Абсолютное позиционирование */
   top: 0;
@@ -110,18 +111,6 @@ button {
   width: 100%;
   height: 100%;
   z-index: 0; /* Отправляем фон на задний план */
-}
-@supports (--css: variables) and (background-image: url(../pics/firstblock/space.avif)) {
-  .firstblock__header::before {
-    background: url(../pics/firstblock/space.avif) no-repeat center center fixed;
-    background-size: cover; /* Добавляем для consistency */
-  }
-}
-@supports (--css: variables) and (background-image: url(../pics/firstblock/space.webp)) {
-  .firstblock__header::before {
-    background: url(../pics/firstblock/space.webp) no-repeat center center fixed;
-    background-size: cover; /* Добавляем для consistency */
-  }
 }
 .firstblock__header__top {
   width: 100%;
@@ -786,8 +775,9 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../pics/secondblock/flex1.avif), url(../pics/secondblock/flex1.webp), url(../pics/secondblock/flex1.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../pics/secondblock/flex1.avif), url(../pics/secondblock/flex1.webp), url(../pics/secondblock/flex1.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), image-set(url(../pics/secondblock/flex1.avif) type("image/avif"), url(../pics/secondblock/flex1.webp) type("image/webp"), url(../pics/secondblock/flex1.png) type("image/png"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), -webkit-image-set(url(../pics/secondblock/flex1.avif) type("image/avif"), url(../pics/secondblock/flex1.webp) type("image/webp"), url(../pics/secondblock/flex1.png) type("image/png"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), image-set(url(../pics/secondblock/flex1.avif) type("image/avif"), url(../pics/secondblock/flex1.webp) type("image/webp"), url(../pics/secondblock/flex1.png) type("image/png"));
   background-size: cover; /* Заполняет весь контейнер */
   background-position: center; /* Центрирует изображение */
   background-repeat: no-repeat; /* Запрещает повторение */
@@ -805,16 +795,19 @@ button {
       flex-shrink: 0;
 }
 .secondblock__flexrow__flexcards__card:nth-child(2) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(../pics/secondblock/flex2.avif), url(../pics/secondblock/flex2.webp), url(../pics/secondblock/flex2.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../pics/secondblock/flex2.avif), url(../pics/secondblock/flex2.webp), url(../pics/secondblock/flex2.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), image-set(url(../pics/secondblock/flex2.avif) type("image/avif"), url(../pics/secondblock/flex2.webp) type("image/webp"), url(../pics/secondblock/flex2.png) type("image/png"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), -webkit-image-set(url(../pics/secondblock/flex2.avif) type("image/avif"), url(../pics/secondblock/flex2.webp) type("image/webp"), url(../pics/secondblock/flex2.png) type("image/png"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), image-set(url(../pics/secondblock/flex2.avif) type("image/avif"), url(../pics/secondblock/flex2.webp) type("image/webp"), url(../pics/secondblock/flex2.png) type("image/png"));
 }
 .secondblock__flexrow__flexcards__card:nth-child(3) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../pics/secondblock/flex3.avif), url(../pics/secondblock/flex3.webp), url(../pics/secondblock/flex3.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../pics/secondblock/flex3.avif), url(../pics/secondblock/flex3.webp), url(../pics/secondblock/flex3.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), image-set(url(../pics/secondblock/flex3.avif) type("image/avif"), url(../pics/secondblock/flex3.webp) type("image/webp"), url(../pics/secondblock/flex3.png) type("image/png"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), -webkit-image-set(url(../pics/secondblock/flex3.avif) type("image/avif"), url(../pics/secondblock/flex3.webp) type("image/webp"), url(../pics/secondblock/flex3.png) type("image/png"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), image-set(url(../pics/secondblock/flex3.avif) type("image/avif"), url(../pics/secondblock/flex3.webp) type("image/webp"), url(../pics/secondblock/flex3.png) type("image/png"));
 }
 .secondblock__flexrow__flexcards__card:nth-child(4) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../pics/secondblock/flex4.avif), url(../pics/secondblock/flex4.webp), url(../pics/secondblock/flex4.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../pics/secondblock/flex4.avif), url(../pics/secondblock/flex4.webp), url(../pics/secondblock/flex4.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), image-set(url(../pics/secondblock/flex4.avif) type("image/avif"), url(../pics/secondblock/flex4.webp) type("image/webp"), url(../pics/secondblock/flex4.png) type("image/png"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), -webkit-image-set(url(../pics/secondblock/flex4.avif) type("image/avif"), url(../pics/secondblock/flex4.webp) type("image/webp"), url(../pics/secondblock/flex4.png) type("image/png"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), image-set(url(../pics/secondblock/flex4.avif) type("image/avif"), url(../pics/secondblock/flex4.webp) type("image/webp"), url(../pics/secondblock/flex4.png) type("image/png"));
 }
 .secondblock__flexrow2 {
   max-width: 1170px;
@@ -971,7 +964,7 @@ button {
 @media only screen and (max-width: 760px) {
   .secondblock {
     padding-top: 25%;
-    display: none;
+    overflow: hidden;
   }
   .secondblock__flexrow {
     -webkit-box-align: center;
@@ -991,7 +984,12 @@ button {
     min-height: 120px;
   }
   .secondblock__flexrow2 {
-    gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .secondblock__flexrow2__title {
+    font-size: 2rem;
   }
 }
 @media (min-width: 761px) and (max-width: 900px) {
@@ -1062,7 +1060,8 @@ button {
 }
 .thirdblock::before {
   content: "";
-  background: url(../pics/thirdblock/arms.jpg) no-repeat center 14%; /* Сдвигаем фон немного вниз */
+  background: -webkit-image-set(url(../pics/thirdblock/arms.avif) type("image/avif"), url(../pics/thirdblock/arms.webp) type("image/webp"), url(../pics/thirdblock/arms.jpg) type("image/jpeg")) no-repeat center 14%;
+  background: image-set(url(../pics/thirdblock/arms.avif) type("image/avif"), url(../pics/thirdblock/arms.webp) type("image/webp"), url(../pics/thirdblock/arms.jpg) type("image/jpeg")) no-repeat center 14%;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -1147,22 +1146,6 @@ button {
   max-width: 255px;
 }
 
-@supports (background-image: url(../pics/thirdblock/arms.webp)) {
-  .thirdblock::before {
-    background: url(../pics/thirdblock/arms.webp) no-repeat center 53%; /* Для WebP */
-    background-attachment: scroll;
-    background-color: rgba(0, 0, 0, 0.8);
-    background-blend-mode: darken;
-  }
-}
-@supports (background-image: url(../pics/thirdblock/arms.avif)) {
-  .thirdblock::before {
-    background: url(../pics/thirdblock/arms.avif) no-repeat center 45%; /* Для AVIF */
-    background-attachment: scroll;
-    background-color: rgba(0, 0, 0, 0.8);
-    background-blend-mode: darken;
-  }
-}
 @media only screen and (max-width: 760px) {
   .thirdblock {
     padding-top: 5%;

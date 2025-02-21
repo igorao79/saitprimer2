@@ -36,10 +36,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-                                  url(../pics/secondblock/flex1.avif),
-                                  url(../pics/secondblock/flex1.webp),
-                                  url(../pics/secondblock/flex1.png);
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      image-set(
+                          url(../pics/secondblock/flex1.avif) type("image/avif"),
+                          url(../pics/secondblock/flex1.webp) type("image/webp"),
+                          url(../pics/secondblock/flex1.png) type("image/png")
+                      );
                 background-size: cover;  /* Заполняет весь контейнер */
                 background-position: center; /* Центрирует изображение */
                 background-repeat: no-repeat; /* Запрещает повторение */
@@ -62,23 +64,30 @@
 
             
             &__card:nth-child(2) {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                                  url(../pics/secondblock/flex2.avif),
-                                  url(../pics/secondblock/flex2.webp),
-                                  url(../pics/secondblock/flex2.png);
+                background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                                  image-set(
+                                      url(../pics/secondblock/flex2.avif) type("image/avif"),
+                                      url(../pics/secondblock/flex2.webp) type("image/webp"),
+                                      url(../pics/secondblock/flex2.png) type("image/png")
+                                  );
             }
             
             &__card:nth-child(3) {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-                                  url(../pics/secondblock/flex3.avif),
-                                  url(../pics/secondblock/flex3.webp),
-                                  url(../pics/secondblock/flex3.png);
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                                  image-set(
+                                      url(../pics/secondblock/flex3.avif) type("image/avif"),
+                                      url(../pics/secondblock/flex3.webp) type("image/webp"),
+                                      url(../pics/secondblock/flex3.png) type("image/png")
+                                  );
             }
+
             &__card:nth-child(4) {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-                                  url(../pics/secondblock/flex4.avif),
-                                  url(../pics/secondblock/flex4.webp),
-                                  url(../pics/secondblock/flex4.png);
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                                  image-set(
+                                      url(../pics/secondblock/flex4.avif) type("image/avif"),
+                                      url(../pics/secondblock/flex4.webp) type("image/webp"),
+                                      url(../pics/secondblock/flex4.png) type("image/png")
+                                  );
             }
             
 
@@ -237,7 +246,7 @@
 @media only screen and (max-width: 760px) {
     .secondblock {
         padding-top: 25%;
-        display: none;
+        overflow: hidden;
 
         &__flexrow {
 
@@ -262,7 +271,11 @@
         }
 
         &__flexrow2 {
-            gap: 10px;
+            align-items: center;
+
+            &__title {
+                font-size: 2rem;
+            }
 
             
 

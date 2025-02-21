@@ -17,7 +17,11 @@
     
         &::before {
             content: '';
-            background: url(../pics/firstblock/space.jpg) no-repeat center center fixed;
+            background: image-set(
+                url(../pics/firstblock/space.avif) type("image/avif"),
+                url(../pics/firstblock/space.webp) type("image/webp"),
+                url(../pics/firstblock/space.jpg) type("image/jpeg")
+            ) no-repeat center center fixed;
             background-size: cover;
             position: absolute; /* Абсолютное позиционирование */
             top: 0;
@@ -30,20 +34,6 @@
 
         }
 
-        @supports (--css: variables) and (background-image: url(../pics/firstblock/space.avif)) {
-            &::before {
-                background: url(../pics/firstblock/space.avif) no-repeat center center fixed;
-                background-size: cover;  /* Добавляем для consistency */
-            }
-        }
-
-
-        @supports (--css: variables) and (background-image: url(../pics/firstblock/space.webp)) {
-            &::before {
-                background: url(../pics/firstblock/space.webp) no-repeat center center fixed;
-                background-size: cover;  /* Добавляем для consistency */
-            }
-        }
 
 
         &__top {
