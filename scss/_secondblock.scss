@@ -99,7 +99,7 @@
         &__arrowleft, &__arrowright {
             position: absolute;
             bottom: 50%;
-            font-size: 5rem;
+            max-width: 30px !important;
             cursor: pointer;
             z-index: 999;
         }
@@ -262,6 +262,19 @@
 
         }
 
+    }
+}
+
+@media (min-width: 761px) and (max-width:900px) {
+    .secondblock {
+        &__flexrow2 {
+            
+            &__flexcards {
+                max-width: 700px;
+                gap: 200px !important;
+            }
+
+        }
     }
 }
 

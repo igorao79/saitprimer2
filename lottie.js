@@ -33,12 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const lottieContainer = document.querySelector('.firstblock__header__center__right__selector .firstblock__header__center__right__selector__lottie-container');
 
-    if (!lottieContainer) {
-        console.error('❌ Lottie контейнер не найден!');
-        return;
-    }
-
-    console.log('✅ Lottie контейнер найден:', lottieContainer);
 
     fetch('./json/location2.json')
         .then(response => response.json())
@@ -54,12 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Используем более универсальный способ нахождения select
             const selectElement = document.querySelector('.firstblock__header__center__right__selector select');
 
-            if (!selectElement) {
-                console.error('❌ Select элемент не найден!');
-                return;
-            }
-
-            console.log('✅ Select найден:', selectElement);
 
             let wasStoppedByMouseOut = false;
 
@@ -90,52 +78,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const starContainer = document.querySelector('.firstblock__header__foot__icons__star');
-    
-    // Создаем контейнер для анимации внутри starContainer
-    const lottieContainer = document.createElement('div');
-    lottieContainer.classList.add('lottie-star-container');
-    starContainer.appendChild(lottieContainer);
+    const heartContainer = document.querySelector('.firstblock__header__foot__icons__heart');
 
-    // Загружаем анимацию
-    fetch('./json/star.json') // Укажите правильный путь к JSON-анимации
+    // Создаем контейнер для Lottie-анимации
+    const lottieContainer = document.createElement('div');
+    lottieContainer.classList.add('lottie-heart-container');
+    heartContainer.appendChild(lottieContainer);
+
+    // Загружаем JSON-анимацию
+    fetch('./json/heartwhite.json') // Укажите правильный путь к анимации сердца
         .then(response => response.json())
         .then(animationData => {
             let animation = lottie.loadAnimation({
                 container: lottieContainer,
                 renderer: 'svg',
-                loop: false, // Анимация не зацикливается
-                autoplay: false, // Не запускаем анимацию сразу
+                loop: false, // Без бесконечного цикла
+                autoplay: false,
                 animationData: animationData
             });
 
-            let hasPlayed = false; // Флаг, который отслеживает, проиграна ли анимация
+            let isAnimating = false; // Флаг, отслеживающий статус анимации
+            let isWaitingToRestart = false; // Флаг, ждущий окончания анимации
 
-            // Запуск анимации при наведении, но только если она еще не проиграна
-            starContainer.addEventListener('mouseenter', () => {
-                if (!hasPlayed) {  // Если анимация еще не проиграна
-                    animation.play(); // Запускаем анимацию
-                    hasPlayed = true; // Устанавливаем флаг, что анимация сыграна
+            heartContainer.addEventListener('mouseenter', () => {
+                if (!isAnimating) {
+                    isAnimating = true;
+                    animation.goToAndPlay(0, true); // Запуск анимации с начала
+                } else {
+                    isWaitingToRestart = true; // Если уже идет анимация, ждем окончания
                 }
             });
 
-            // Остановка анимации при убирании курсора с элемента
-            starContainer.addEventListener('mouseleave', () => {
-                if (animation.isPlaying) {
-                    animation.stop(); // Останавливаем анимацию, если она еще играет
-                }
-            });
-
-            // Обработчик завершения анимации
+            // Когда анимация завершена
             animation.addEventListener('complete', () => {
-                // После завершения анимации, она не будет запускаться снова
+                isAnimating = false;
+
+                // Если было новое наведение, запускаем анимацию заново
+                if (isWaitingToRestart) {
+                    isWaitingToRestart = false;
+                    animation.goToAndPlay(0, true);
+                    isAnimating = true;
+                }
             });
         })
         .catch(error => {
-            console.error('Error loading animation:', error);
-            alert('Не удалось загрузить анимацию');
+            console.error('Ошибка загрузки анимации:', error);
+            alert('Не удалось загрузить анимацию сердечка');
         });
 });
+
+
 
 
 

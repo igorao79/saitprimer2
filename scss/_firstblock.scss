@@ -186,9 +186,10 @@
                 align-items: center;
 
 
-                &__star {
+                &__heart {
                     max-width: 35px;
                     min-height: 35px;
+                    fill: white;
                 }
 
                 &__delivery {
@@ -216,8 +217,9 @@
 
         &__arrowright, &__arrowleft {
             position: absolute;
-            font-size: 3rem;
             cursor: pointer;
+            max-width: 30px;
+            z-index: 999;
         }
 
         &__arrowright {
@@ -500,11 +502,13 @@
         &__main {
             
             &__arrowleft {
+                top: 90%;
                 left: 5%;
             }
 
             &__arrowright {
-                right: 10%;
+                right: 5%;
+                top: 90%;
             }
 
             &__card {
@@ -550,6 +554,28 @@
     }
 }
 
+@media (min-width: 761px) and (max-width:900px) {
+    .firstblock {
+
+        &__header {
+
+            &__center {
+                gap: 100px !important;
+            }
+
+            &__foot {
+                gap: 10px !important;
+
+                &__nav {
+                    gap: 2px !important;
+                }
+
+            }
+
+        }
+
+    }
+}
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .firstblock {

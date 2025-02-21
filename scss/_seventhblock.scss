@@ -57,10 +57,10 @@
         &__arrowright {
             position: absolute;
             bottom: 50%;
-            font-size: 5rem;
+            max-width: 30px;
             cursor: pointer;
             z-index: 999;
-            color: white;
+            fill: white;
         }
     
         &__arrowleft {
@@ -98,5 +98,12 @@
             max-width: 300px !important;
         }
 
+    }
+}
+
+@media (min-width: 761px) and (max-width:900px) {
+    .seventhblock {
+        flex-direction: column;
+        padding: 5% 0;
     }
 }

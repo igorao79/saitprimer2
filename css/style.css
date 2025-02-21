@@ -277,9 +277,10 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
-.firstblock__header__foot__icons__star {
+.firstblock__header__foot__icons__heart {
   max-width: 35px;
   min-height: 35px;
+  fill: white;
 }
 .firstblock__header__foot__icons__delivery {
   max-width: 35px;
@@ -302,8 +303,9 @@ button {
 }
 .firstblock__main__arrowright, .firstblock__main__arrowleft {
   position: absolute;
-  font-size: 3rem;
   cursor: pointer;
+  max-width: 30px;
+  z-index: 999;
 }
 .firstblock__main__arrowright {
   right: 2%;
@@ -618,10 +620,12 @@ button {
     gap: 20px;
   }
   .firstblock__main__arrowleft {
+    top: 90%;
     left: 5%;
   }
   .firstblock__main__arrowright {
-    right: 10%;
+    right: 5%;
+    top: 90%;
   }
   .firstblock__main__card {
     -webkit-box-orient: vertical;
@@ -650,6 +654,17 @@ button {
   .firstblock__footer__element svg {
     width: 30px;
     height: 30px;
+  }
+}
+@media (min-width: 761px) and (max-width: 900px) {
+  .firstblock__header__center {
+    gap: 100px !important;
+  }
+  .firstblock__header__foot {
+    gap: 10px !important;
+  }
+  .firstblock__header__foot__nav {
+    gap: 2px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -778,7 +793,7 @@ button {
 .secondblock__flexrow2__arrowleft, .secondblock__flexrow2__arrowright {
   position: absolute;
   bottom: 50%;
-  font-size: 5rem;
+  max-width: 30px !important;
   cursor: pointer;
   z-index: 999;
 }
@@ -932,6 +947,12 @@ button {
   }
   .secondblock__flexrow2 {
     gap: 10px;
+  }
+}
+@media (min-width: 761px) and (max-width: 900px) {
+  .secondblock__flexrow2__flexcards {
+    max-width: 700px;
+    gap: 200px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -1137,6 +1158,11 @@ button {
   }
   .thirdblock__right {
     padding: 10px 20px;
+  }
+}
+@media (min-width: 761px) and (max-width: 900px) {
+  .thirdblock {
+    padding: 5% 5% !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -1395,6 +1421,11 @@ button {
     gap: 20px;
   }
 }
+@media (min-width: 761px) and (max-width: 900px) {
+  .fifthblock {
+    padding: 5% 5% !important;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .fifthblock {
     padding: 5% 0%;
@@ -1643,10 +1674,10 @@ button {
 .seventhblock__pic__arrowleft, .seventhblock__pic__arrowright {
   position: absolute;
   bottom: 50%;
-  font-size: 5rem;
+  max-width: 30px;
   cursor: pointer;
   z-index: 999;
-  color: white;
+  fill: white;
 }
 .seventhblock__pic__arrowleft {
   bottom: 2%;
@@ -1680,5 +1711,14 @@ button {
   .seventhblock__pic {
     min-width: 0;
     max-width: 300px !important;
+  }
+}
+@media (min-width: 761px) and (max-width: 900px) {
+  .seventhblock {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5% 0;
   }
 }/*# sourceMappingURL=style.css.map */

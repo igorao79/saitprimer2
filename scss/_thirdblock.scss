@@ -166,6 +166,12 @@
 
 }
 
+@media (min-width: 761px) and (max-width:900px) {
+    .thirdblock {
+        padding: 5% 5% !important;
+    }
+}
+
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .thirdblock {

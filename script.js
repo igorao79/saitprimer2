@@ -256,3 +256,9 @@ function toggleMenu() {
 // /////////////////////////////////////////////////////
 
 
+const modal = `
+    <div class="modal">
+        <div>Modal content</div>
+        <button id="close-modal-btn">Close</button>
+    </div>
+`
