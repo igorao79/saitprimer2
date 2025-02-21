@@ -102,6 +102,12 @@
             max-width: 30px !important;
             cursor: pointer;
             z-index: 999;
+            transition: 0.7s;
+
+            &:hover {
+                scale: 1.1;
+            }
+
         }
 
         &__arrowleft {

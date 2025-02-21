@@ -61,6 +61,13 @@
             cursor: pointer;
             z-index: 999;
             fill: white;
+            transition: 0.7s;
+
+            &:hover {
+                scale: 1.1;
+            }
+
+
         }
     
         &__arrowleft {
