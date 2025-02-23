@@ -31,12 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const lottieContainer = document.querySelector('.firstblock__header__center__right__selector .firstblock__header__center__right__selector__lottie-container');
+    // Контейнер для анимации Lottie
+    const lottieContainer = document.querySelector('.firstblock__header__center__right__selector__lottie-container');
 
-
+    // Загрузка анимации Lottie
     fetch('./json/location2.json')
         .then(response => response.json())
         .then(animationData => {
+            // Инициализация анимации Lottie
             let animation = lottie.loadAnimation({
                 container: lottieContainer,
                 renderer: 'svg',
@@ -45,27 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 animationData: animationData
             });
 
-            // Используем более универсальный способ нахождения select
-            const selectElement = document.querySelector('.firstblock__header__center__right__selector select');
+            // Контейнер, на который будем вешать события
+            const contContainer = document.querySelector('.firstblock__header__center__right__selector__cont');
 
-
+            // Флаг для отслеживания остановки анимации
             let wasStoppedByMouseOut = false;
 
-            selectElement.addEventListener('mouseover', () => {
+            // Событие при наведении на контейнер
+            contContainer.addEventListener('mouseover', () => {
+                console.log('Mouseover on cont container');
                 if (!animation.isPlaying && !wasStoppedByMouseOut) {
-                    animation.play();
+                    animation.play(); // Запуск анимации
                 }
             });
 
-            selectElement.addEventListener('mouseout', () => {
+            // Событие при уходе курсора с контейнера
+            contContainer.addEventListener('mouseout', () => {
+                console.log('Mouseout from cont container');
                 if (animation.isPlaying) {
-                    wasStoppedByMouseOut = true;
+                    wasStoppedByMouseOut = true; // Устанавливаем флаг
                 }
             });
 
+            // Событие завершения анимации
             animation.addEventListener('complete', () => {
-                animation.goToAndStop(0, true);
-                wasStoppedByMouseOut = false;
+                animation.goToAndStop(0, true); // Сброс анимации
+                wasStoppedByMouseOut = false; // Сброс флага
             });
         })
         .catch(error => {
@@ -73,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Не удалось загрузить анимацию');
         });
 });
-
 
 
 

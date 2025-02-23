@@ -189,10 +189,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextButton = document.querySelector('.seventhblock__pic__arrowright');
     const imgElement = slider.querySelector('.image-slide'); // Элемент для отображения изображения
 
-    if (!imgElement) {
-        console.error("Элемент .image-slide не найден!");
-        return;
-    }
 
     // Функция для обновления слайдера
     function updateSlider() {
@@ -262,3 +258,24 @@ const modal = `
         <button id="close-modal-btn">Close</button>
     </div>
 `
+
+
+// /////////////////////////////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', function () {
+    const select = new SlimSelect({
+      select: '.firstblock__header__center__right__selector__cont__select',
+      settings: {
+        showSearch: false, // used in example
+        focusSearch: false, // used in example
+        searchText: 'Sorry nothing to see here', // used in example
+        searchPlaceholder: 'Search for the good stuff!', // used in example
+        searchHighlight: true // used in example
+      }
+    });
+
+    // Обработка события выбора
+    select.onChange = (info) => {
+      console.log('Выбранный элемент:', info.value);
+    };
+  });

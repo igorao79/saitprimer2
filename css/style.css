@@ -35,6 +35,70 @@ button {
   border: none;
 }
 
+body .ss-main {
+  width: 180px;
+  height: 40px;
+  font-size: 1.6rem;
+  padding: 5px;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #010101;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: border-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  font-family: "graphsb";
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body .ss-main:hover {
+  border-color: #ffffff;
+}
+body .ss-main:focus {
+  -webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+body .ss-content {
+  width: 500px;
+  max-height: 200px;
+  border: 2px solid #010101;
+  border-radius: 8px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .ss-option {
+  background-color: #fff;
+  color: #333;
+  font-size: 1.3rem;
+  font-family: "graphsb";
+  padding: 8px;
+  cursor: pointer;
+}
+body .ss-option:hover {
+  background-color: #f1f1f1;
+}
+body .ss-option.ss-selected {
+  background-color: black;
+  color: #fff;
+}
+
+@media only screen and (max-width: 760px) {
+  body .ss-main {
+    width: 150px;
+  }
+}
 @font-face {
   font-family: "graphr";
   src: url("../fonts/GraphikLCG-Regular.woff2") format("woff2"), url("../fonts/GraphikLCG-Regular.woff") format("woff");
@@ -152,6 +216,10 @@ button {
   gap: 650px;
   z-index: 1;
 }
+.firstblock__header__center svg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
 .firstblock__header__center__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,6 +237,48 @@ button {
 }
 .firstblock__header__center__right__selector__lottie-container {
   width: 24px;
+}
+.firstblock__header__center__right__selector__select {
+  width: 500px;
+  position: relative;
+  font-size: 1.6rem;
+  padding: 5px;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #010101;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: border-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  font-family: "graphsb";
+  text-align: center;
+}
+.firstblock__header__center__right__selector__select:hover {
+  border-color: #ffffff;
+}
+.firstblock__header__center__right__selector__select:focus {
+  -webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+.firstblock__header__center__right__selector__select option {
+  background-color: #fff;
+  border: none;
+  color: #333;
+  font-size: 1.3rem;
+  font-family: "graphsb";
+}
+.firstblock__header__center__right__selector__select option:hover {
+  background-color: #f1f1f1;
+}
+.firstblock__header__center__right__selector__select option:active {
+  background-color: black;
+  color: #fff;
 }
 .firstblock__header__center__right__phone {
   display: -webkit-box;
@@ -714,8 +824,16 @@ button {
   }
 }
 @media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+  .firstblock__header__center {
+    gap: 450px;
+  }
   .firstblock__header__foot {
-    gap: 100px;
+    gap: 50px;
+  }
+  .firstblock__footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 800px;
   }
 }
 .secondblock {
@@ -1036,7 +1154,26 @@ button {
   }
 }
 @media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+  .secondblock {
+    padding-top: 10%;
+  }
+  .secondblock__flexrow {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .secondblock__flexrow__flexcards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 800px;
+  }
   .secondblock__flexrow2 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 1000px;
   }
   .secondblock__flexrow2__arrowright, .secondblock__flexrow2__arrowleft {
@@ -1221,6 +1358,20 @@ button {
     background-blend-mode: darken;
   }
 }
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+  .thirdblock {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5% 0;
+  }
+  .thirdblock__left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .fourthblock {
   width: 100%;
   min-height: 490px;
@@ -1335,6 +1486,14 @@ button {
     -webkit-transform: translateX(-3%);
         -ms-transform: translateX(-3%);
             transform: translateX(-3%);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+  .fourthblock {
+    overflow: hidden;
+  }
+  .fourthblock__flexblock {
+    scale: 0.93;
   }
 }
 .fifthblock {
@@ -1463,6 +1622,19 @@ button {
   }
   .fifthblock__flexrow {
     max-width: 800px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+  .fifthblock {
+    padding: 5% 0%;
+  }
+  .fifthblock__text {
+    max-width: 1000px;
+  }
+  .fifthblock__flexrow {
+    max-width: 900px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -1785,5 +1957,18 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 5% 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+  .seventhblock {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5% 0;
+    gap: 10px;
+  }
+  .seventhblock__left {
+    max-width: 1000px;
   }
 }/*# sourceMappingURL=style.css.map */

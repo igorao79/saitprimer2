@@ -69,6 +69,10 @@
             gap: 650px;
             z-index: 1;
 
+            & svg {
+                flex-shrink: 0;
+            }
+
 
             &__right {
                 display: flex;
@@ -81,6 +85,49 @@
             
                     &__lottie-container {
                         width: 24px;
+                    }
+
+                    &__select {
+                        width: 500px;
+                        position: relative;
+                        font-size: 1.6rem;
+                        padding: 5px;
+                        background-color: #fff;
+                        color: #333;
+                        border: 2px solid #010101;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        outline: none;
+                        appearance: none; 
+                        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+                        font-family: 'graphsb';
+                        text-align: center;
+
+                        &:hover {
+                            border-color: #ffffff;
+                        }
+
+                        &:focus {
+                            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+                        }
+
+                        option {
+                          background-color: #fff;
+                          border: none;
+                          color: #333;
+                          font-size: 1.3rem;
+                          font-family: 'graphsb';
+                        
+                          &:hover {
+                            background-color: #f1f1f1;
+                          }
+
+                          &:active {
+                            background-color: black;
+                            color: #fff;
+                          }
+                        }
+
                     }
             
                     
@@ -651,11 +698,19 @@
         
         &__header {
 
-
-            &__foot {
-                gap: 100px;
+            &__center {
+                gap: 450px;
             }
 
+            &__foot {
+                gap: 50px;
+            }
+
+        }
+
+        &__footer {
+            flex-wrap: wrap;
+            max-width: 800px;
         }
 
     }

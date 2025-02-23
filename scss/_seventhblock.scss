@@ -114,3 +114,19 @@
         padding: 5% 0;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+
+    .seventhblock {
+        flex-direction: column;
+        padding: 5% 0;
+        gap: 10px;
+
+
+        &__left {
+            max-width: 1000px;
+        }
+
+    }
+
+}

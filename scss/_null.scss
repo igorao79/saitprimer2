@@ -29,4 +29,64 @@ button {
     border: none;
 }
 
+//ss 
 
+body .ss-main {
+    width: 180px;
+    height: 40px;
+    font-size: 1.6rem;
+    padding: 5px;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #010101;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'graphsb';
+    text-align: center;
+    box-sizing: border-box;
+  
+    &:hover {
+      border-color: #ffffff;
+    }
+  
+    &:focus {
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  body .ss-content {
+    width: 500px;
+    max-height: 200px;
+    border: 2px solid #010101;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  body .ss-option {
+    background-color: #fff;
+    color: #333;
+    font-size: 1.3rem;
+    font-family: 'graphsb';
+    padding: 8px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  
+    &.ss-selected {
+      background-color: black;
+      color: #fff;
+    }
+  }
+
+  @media only screen and (max-width: 760px) {
+    body .ss-main {
+        width: 150px;
+    }
+  }

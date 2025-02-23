@@ -7,8 +7,11 @@
     <link rel="icon" href="pics/igoric.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.8.0/slimselect.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Подключение стилей SlimSelect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.8.0/slimselect.min.js"></script>
     <!-- Icons by Lordicon.com: https://lordicon.com/ -->
 </head>
 <body>
@@ -27,11 +30,14 @@
                     <div class="firstblock__header__center__right">
                         <div class="firstblock__header__center__right__selector">
                             <div class="firstblock__header__center__right__selector__lottie-container"></div>  <!-- Здесь будет анимация -->
-                            <select class=".firstblock__header__center__right__selector__select">
-                                <option value="moscow">Москва</option>
-                                <option value="spb">Санкт-Петербург</option>
-                                <option value="kazan">Казань</option>
-                            </select>
+                            <div class="firstblock__header__center__right__selector__cont">
+                                <select class="firstblock__header__center__right__selector__cont__select">
+                                    <option class="option" value="moscow">Москва</option>
+                                    <option value="spb">Санкт-Петербург</option>
+                                    <option value="kazan">Казань</option>
+                                </select>
+                            </div>
+                            
                         </div>
                         <div class="firstblock__header__center__right__phone">
                             <svg width="14.984375" height="15.008667" viewBox="0 0 14.9844 15.0087" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

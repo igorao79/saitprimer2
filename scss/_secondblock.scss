@@ -337,7 +337,22 @@
 
 @media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
     .secondblock {
+
+        padding-top: 10%;
+
+        &__flexrow {
+            align-items: center;
+
+            &__flexcards {
+                justify-content: center;
+                flex-wrap: wrap;
+                max-width: 800px;
+            }
+
+        }
+
         &__flexrow2 {
+            align-items: center;
             max-width: 1000px;
             &__arrowright, &__arrowleft {
                 display: none;
@@ -345,3 +360,4 @@
         }
     }
 }
+

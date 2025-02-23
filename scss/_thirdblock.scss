@@ -185,3 +185,15 @@
         }
     }
 }
+
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+    .thirdblock {
+        flex-direction: column;
+        padding: 5% 0;
+
+        &__left {
+            align-items: center;
+        }
+
+    }
+}

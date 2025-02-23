@@ -123,3 +123,14 @@
         
     }
 }
+
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+    .fourthblock {
+        overflow: hidden;
+
+        &__flexblock {
+            scale: 0.93;
+        }
+
+    }
+}

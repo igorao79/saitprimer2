@@ -116,3 +116,21 @@
         }
     }
 }
+
+@media (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
+
+    .fifthblock {
+
+        padding: 5% 0%;
+
+        &__text {
+            max-width: 1000px;
+        }
+
+        &__flexrow {
+            max-width: 900px;
+            flex-wrap: wrap;
+        }
+    }
+
+}
